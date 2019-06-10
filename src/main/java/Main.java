@@ -96,7 +96,7 @@ public class Main {
         String result = "";
         for (Map.Entry<IRI, Set<String>> e : iriSetMap.entrySet()) {
             for (String s : e.getValue()){
-                result += s + ":IRI=" + e.getKey().getShortForm() + "\n";
+                result += s + ":IRI=" + e.getKey().getShortForm() + System.lineSeparator();
             }
         }
         return result;
@@ -105,6 +105,7 @@ public class Main {
     private static void writeSynonymFile(Map<IRI, Set<String>> iriSetMap, String outfname) throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter(outfname, "UTF-8");
         writer.print(generateOutput(iriSetMap));
+        writer.close();
     }
 
     public static void main(String[] args){
