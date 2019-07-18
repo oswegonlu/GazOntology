@@ -111,7 +111,7 @@ public class Main {
     public static void main(String[] args){
         /***** Command Line Arguments ******/
         Options options = new Options();
-        options.addOption("f", "ontologyFile", true, "ontology file to process");
+        options.addOption("f", "ontologyFile", true, "ontology file to process (required)");
         options.addOption("id", "ontologyID", true, "ontology identifier (e.g., iao)");
         options.addOption("top", "topTerm", true, "top term to include");
         options.addOption("r", "include related (inexact) synonyms");
@@ -138,7 +138,9 @@ public class Main {
 
         /***** Prepare to read the file... ******/
         if (inputFileName == null){
-            System.out.println("You must enter an ontology file name.");
+            HelpFormatter formatter = new HelpFormatter();
+            formatter.printHelp( "GazOntology", options );
+            //System.out.println("You must enter an ontology file name.");
             System.exit(1);
         }
 
