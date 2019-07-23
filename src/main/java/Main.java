@@ -96,7 +96,7 @@ public class Main {
         String result = "";
         for (Map.Entry<IRI, Set<String>> e : iriSetMap.entrySet()) {
             for (String s : e.getValue()){
-                result += s + ":IRI=" + e.getKey().getShortForm() + System.lineSeparator();
+                result += s.replace(":", "_") + ":IRI=" + e.getKey().getShortForm() + System.lineSeparator();
             }
         }
         return result;
