@@ -41,3 +41,7 @@ If you make use of this tool in academic work, please cite it as follows:
 Schlegel, D.R., Fontana, R., and Naaktgeboren, A. 
 [GazOntology: A Tool for Building GATE Gazetteer Lists from Ontologies (short paper)](https://danielschlegel.org/wp/wp-content/uploads/2019/07/ont-gaz.pdf). 
 1st International Workshop on Biomedical Ontologies & Natural Language Processing, July 2019, 2 pages.
+
+## Acknowledgements
+
+This work was supported by the National Library Of Medicine of the National Institutes of Health under Award Number R15LM013030. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.
